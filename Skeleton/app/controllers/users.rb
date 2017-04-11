@@ -18,8 +18,8 @@ end
 
 get '/users/:id' do
   @user = User.find_by(id: session[:user_id])
-
-  if logged_in?
+# !!!!!!!!!! restrict the route from being accassable by just trying into the browser.
+  if logged_in? && user.id == session[:user_id]
     erb :'/users/show'
   else
     redirect '/sessions/new'
