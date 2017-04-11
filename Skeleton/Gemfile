@@ -24,5 +24,5 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
+  gem 'faker', git: "https://github.com/stympy/faker.git"
 end
