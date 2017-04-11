@@ -1,0 +1,16 @@
+<h1>LOGIN</h1>
+
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p> <%= error %></p>
+  <% end %>
+<% end %>
+
+
+<form method="post" action="/sessions">
+  <label for="email">Email Address:</label>
+    <input type="text" name="email"><br>
+  <label for="password">Password:</label>
+    <input type="password" name="password"><br>
+    <input type="submit" value="LOGIN" class="button">
+</form>

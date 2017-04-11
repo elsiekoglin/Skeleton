@@ -1,0 +1,20 @@
+<h1>REGISTER</h1>
+
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p> <%= error %></p>
+  <% end %>
+<% end %>
+
+<form method="post" action="/users">
+  <label for="user[full_name]">Full Name:</label>
+  <input type="text" name="user[full_name]"><br>
+
+  <label for="user[email]">Email Address:</label>
+  <input type="text" name="user[email]"><br>
+
+  <label for="password">Password:</label>
+  <input type="password" name="user[password]"><br>
+
+  <input type="submit" value="Register" class="button">
+</form>
